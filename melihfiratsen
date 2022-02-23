@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+
+public class Test {
+	public static void main(String[] args) {
+		/**
+		 * @author M. Firat Sen, 2022
+		 */
+		double price, kdvRate, newPrice;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Price without KDV: ");
+		price = input.nextDouble();
+		kdvRate = price > 1000 ?  18 : 8;
+		newPrice = (price*(100+kdvRate))/100;
+		System.out.println("Price without KDV: " + price);
+		System.out.println("Price with KDV: " + newPrice);
+		System.out.println("KDV: " + (newPrice-price));
+	}
+}
